@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "LED Notifications",
-    "version": "2015.12.5.1",
+    "version": "2015.12.5.2",
     "description": "Blinks Your Webcam LED Light When You Have Unread Notifications In Any Open Chrome Tabs",
     "icons": {
         "16": "icons/16.png",

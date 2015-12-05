@@ -34,6 +34,11 @@
             frequency = change.frequency.newValue;
         }
     });
+    chrome.storage.sync.get('frequency', function (storage) {
+        if (storage.frequency) {
+            frequency = storage.frequency;
+        }
+    });
     chrome.runtime.onConnect.addListener(function (port) {
         port.onMessage.addListener(function (start) {
             if (start) {
