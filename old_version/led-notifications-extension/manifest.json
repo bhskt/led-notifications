@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "LED Notifications (Extension)",
+    "version": "2015.12.04",
+    "description": "",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+    "author": "Bhaskar Tiwari",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}

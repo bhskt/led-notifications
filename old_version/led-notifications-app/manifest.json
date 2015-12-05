@@ -1,0 +1,22 @@
+{
+    "app": {
+        "background": {
+            "scripts": [
+                "script.js"
+            ]
+        }
+    },
+    "manifest_version": 2,
+    "name": "LED Notifications (App)",
+    "version": "2015.12.04",
+    "description": "",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+    "author": "Bhaskar Tiwari",
+    "permissions": [
+        "videoCapture"
+    ]
+}

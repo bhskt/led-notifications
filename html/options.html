@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>LED Notifications</title>
+</head>
+<body class="text-center">
+    <div class="box">
+        <div class="vertical-center"><img src="/icons/128.png"></div>
+        <div class="vertical-center"><h1>LED Indicator</h1><h4 class="text-muted">Google Chrome Extension</small></h4></div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="vertical-center"><h4 id="status" class="text-muted">WAITING FOR USER</h4></div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="vertical-center"><h5>You Can <strong>Allow / Block</strong> Access To Your Webcam From This Page</h5></div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="vertical-center"><h5 class="text-muted">Access To Your Webcam Is Required To Use Its LED Indicator</h5></div>
+    </div>
+    <br>
+    <div class="box">
+        <div class="vertical-center"><h5 class="text-muted">This Extension Reloads All Open Tabs To Make Them Visible To Itself</h5></div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        margin-top: 20px;
+        background-color: #EEE;
+    }
+    .box {
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .vertical-center {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    .vertical-center:last-child {
+        margin-right: 0;   
+    }
+    h4 {
+        font-weight: bold;
+    }
+</style>
+<script src="/scripts/options.js"></script>
