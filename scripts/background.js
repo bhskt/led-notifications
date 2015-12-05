@@ -4,18 +4,15 @@
     var urls = new Set();
     var frequencyMap = {slow: 2, medium: 1, fast: 0.5};
     var frequency = 'medium';
-    function checkBlink() {
-        if (urls.size) {
-            blink(1000 * frequencyMap[frequency]);
-        }
-    }
     function blink(duration) {
         navigator.webkitGetUserMedia({video: true}, function (stream) {
             setTimeout(function () {
                 if (stream.active) {
                     stream.getTracks()[0].stop();
                     setTimeout(function () {
-                        checkBlink();
+                        if (urls.size) {
+                            blink(1000 * frequencyMap[frequency]);
+                        }
                     }, duration / 2);
                 }
             }, duration);
@@ -40,15 +37,16 @@
     chrome.runtime.onConnect.addListener(function (port) {
         port.onMessage.addListener(function (start) {
             if (start) {
+                if (!urls.size) {
+                    blink(1000 * frequencyMap[frequency]);
+                }
                 urls.add(port.sender.url);
             } else {
                 urls.delete(port.sender.url);
             }
-            checkBlink();
         });
         port.onDisconnect.addListener(function () {
             urls.delete(port.sender.url);
-            checkBlink();
         });
     });
 }());
